@@ -339,7 +339,8 @@ func (r *River) makeReqColumnData(col *schema.TableColumn, value interface{}) in
 			if err != nil || vt.IsZero() { // failed to parse date or zero date
 				return nil
 			}
-			return vt.Format(time.RFC3339)
+			//return vt.Format(time.RFC3339)
+			return vt;
 		}
 	case schema.TYPE_DATE:
 		switch v := value.(type) {
