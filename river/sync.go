@@ -340,7 +340,7 @@ func (r *River) makeReqColumnData(col *schema.TableColumn, value interface{}) in
 				return nil
 			}
 			//return vt.Format(time.RFC3339)
-			return vt;
+			return vt.Format("2006-01-02 13:23:24")
 		}
 	case schema.TYPE_DATE:
 		switch v := value.(type) {
